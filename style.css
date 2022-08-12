@@ -26,10 +26,10 @@ input, button {
 }
 
 main {
-    max-width: 600px;
+    max-width: 750px;
     width: 100%;
     margin: 0 auto;
-    padding: 16px 16px 20px;
+    padding: 10px 10px 12px;
     background: #ffff;
 
 }
@@ -144,15 +144,17 @@ main {
 }
 
 .book_shelf > .book_list {
-    padding: 16px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .book_shelf > .book_list > .book_item {
-    padding: 15px 20px;
+    padding: 15px 10px;
     border-radius: 5px;
-    margin: 10px 0;
-    box-shadow: 0 0 15px black;
-    width: 160px;
+    margin: 10px auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.292);
+    width: 150px;
     background: url("https://i.pinimg.com/originals/67/17/61/671761df238709a42f6f1aeba01fb0cb.jpg");
     background-size: cover;
     background-position: center;
@@ -215,5 +217,26 @@ main {
     body {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.578);
         background: rgba(255, 255, 255, 0.275);
+    }
+}
+
+@media (max-width: 380px) {
+    .book_shelf > .book_list {
+        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    .book_shelf > .book_list > .book_item {
+        padding: 15px 10px;
+        border-radius: 5px;
+        margin: 10px auto;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.292);
+        width: 200px;
+        background: url("https://i.pinimg.com/originals/67/17/61/671761df238709a42f6f1aeba01fb0cb.jpg");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 }
