@@ -6,6 +6,7 @@
 body {
     margin: auto;
     width: fit-content;
+    background: transparent;
 }
 body, input, button {
     font-family: 'Open Sans', sans-serif;
@@ -151,8 +152,13 @@ main {
     border-radius: 5px;
     margin: 10px 0;
     box-shadow: 0 0 15px black;
-    width: 200px;
-    background: url("https://img.freepik.com/free-vector/abstract-blue-geometric-shapes-background_1035-17545.jpg");
+    width: 160px;
+    background: url("https://i.pinimg.com/originals/67/17/61/671761df238709a42f6f1aeba01fb0cb.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .book_shelf > .book_list > .book_item > h3 {
     border-bottom: 1px solid black;

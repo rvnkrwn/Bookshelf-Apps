@@ -51,8 +51,10 @@ function  createViewBook(i,book){
 // fungsi memanggil create element dan pencarian deangan memanggil funsi createViewBook
 function displayBooks() {
     clearTodolist();
-    let data = JSON.parse(localStorage.getItem('books'));
-    for (let i = 0; i < data.length; i++) {
+    const data = JSON.parse(localStorage.getItem('books'));
+    console.log(data)
+    const j = data.length
+    for (let i = 0; i < j; i++) {
         const book = data[i];
 
         const searchText = document.getElementById('searchBookTitle').value.toLowerCase();
