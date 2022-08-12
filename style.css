@@ -3,7 +3,10 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+body {
+    margin: auto;
+    width: fit-content;
+}
 body, input, button {
     font-family: 'Open Sans', sans-serif;
 }
@@ -25,7 +28,8 @@ main {
     max-width: 600px;
     width: 100%;
     margin: 0 auto;
-    padding: 16px;
+    padding: 16px 16px 20px;
+    background: #ffff;
 
 }
 
@@ -199,4 +203,11 @@ main {
     font-size: smaller;
     align-self: center;
     float: start;
+}
+
+@media (min-width: 500px) {
+    body {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.578);
+        background: rgba(255, 255, 255, 0.275);
+    }
 }

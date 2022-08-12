@@ -44,7 +44,7 @@ function  createViewBook(i,book){
     pTahun.textContent = `Tahun: ${book['year']}`;
     buttonHapus.innerHTML = `<i class="fas fa-trash"></i> <span>Hapus Buku</span>`;
 
-    buttonHapus.setAttribute("onclick", "deleteBook('books'," + i + ")")
+    buttonHapus.setAttribute("onclick", `deleteBook(${i})`)
 
 }
 
@@ -101,13 +101,11 @@ cari.onkeydown = function () {
 
 
 // fungsi untuk menghapus buku
-function deleteBook(key,index) {
+function deleteBook(index) {
     if (confirm("Yakin ingin mengapus ?")) {
-        let removeItem = JSON.parse(localStorage.getItem(key));
-        if (index === 0) {
-            removeItem.splice(index, 1)
-        }
-        localStorage.setItem(key, JSON.stringify(removeItem));
+        let removeItem = JSON.parse(localStorage.getItem('books'));
+        removeItem.splice(index, 1);
+        localStorage.setItem('books', JSON.stringify(removeItem));
         displayBooks();
     }
 }
